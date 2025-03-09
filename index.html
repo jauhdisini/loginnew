@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button>Login</button>
+        <p class="toggle" onclick="toggleForm()">Belum punya akun? Register</p>
+    </div>
+    
+    <div class="container" id="registerContainer" style="display: none;">
+        <h2>Register</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="date" required>
+        <select required>
+            <option value="">Pilih Jenis Kelamin</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+        </select>
+        <input type="password" placeholder="Password" required>
+        <input type="file" accept="image/*" required>
+        <button>Register</button>
+        <p class="toggle" onclick="toggleForm()">Sudah punya akun? Login</p>
+    </div>
+
+    <script>
+        function toggleForm() {
+            let loginContainer = document.getElementById('loginContainer');
+            let registerContainer = document.getElementById('registerContainer');
+            if (loginContainer.style.display === 'none') {
+                loginContainer.style.display = 'block';
+                registerContainer.style.display = 'none';
+            } else {
+                loginContainer.style.display = 'none';
+                registerContainer.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
